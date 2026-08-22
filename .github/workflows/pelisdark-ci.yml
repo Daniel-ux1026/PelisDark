@@ -1,0 +1,38 @@
+name: PelisDark CI
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-test-deploy:
+    name: Build, tests and simulated deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Compilacion de proyecto simple
+        run: npm run build
+
+      - name: Ejecucion de pruebas automatizadas
+        run: npm test
+
+      - name: Despliegue simulado
+        run: npm run deploy:simulate
+
+      - name: Publicar artefacto de staging
+        uses: actions/upload-artifact@v4
+        with:
+          name: pelisdark-staging
+          path: staging
