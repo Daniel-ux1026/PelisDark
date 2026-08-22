@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PelisDark</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="PelisDark inicio">
+      <span class="brand-mark"></span>
+      PelisDark
+    </a>
+
+    <nav class="main-nav" aria-label="Navegacion principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#peliculas">Peliculas</a>
+      <a href="#series">Series</a>
+      <a href="#tendencias">Tendencias</a>
+      <a href="#mi-lista">Mi Lista</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-button" id="searchToggle" aria-label="Mostrar busqueda">
+        <span aria-hidden="true">⌕</span>
+      </button>
+      <button class="profile-button" aria-label="Perfil de usuario">DO</button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-backdrop" aria-hidden="true">
+        <span class="planet planet-one"></span>
+        <span class="planet planet-two"></span>
+        <span class="signal signal-one"></span>
+        <span class="signal signal-two"></span>
+      </div>
+      <div class="hero-content">
+        <p class="eyebrow">Estreno original PelisDark</p>
+        <h1 id="heroTitle">Sombras del Horizonte</h1>
+        <p class="hero-description">
+          Una expedicion atraviesa una ciudad suspendida entre luces prohibidas, secretos antiguos
+          y una ultima transmision capaz de cambiar el destino de la noche.
+        </p>
+        <div class="hero-meta">
+          <span>2026</span>
+          <span>Ciencia ficcion</span>
+          <span>2h 08m</span>
+          <span>9.3</span>
+        </div>
+        <div class="hero-actions">
+          <button class="primary-button" data-play-hero>Reproducir</button>
+          <button class="secondary-button" data-add-hero>Agregar a mi lista</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="controls-panel" aria-label="Busqueda y filtros">
+      <div class="search-box" id="searchBox">
+        <label for="searchInput">Buscar</label>
+        <input id="searchInput" type="search" placeholder="Buscar peliculas o series..." autocomplete="off">
+      </div>
+
+      <div class="genre-filters" aria-label="Filtros por genero">
+        <button class="filter-button active" data-genre="Todos">Todos</button>
+        <button class="filter-button" data-genre="Accion">Accion</button>
+        <button class="filter-button" data-genre="Ciencia ficcion">Ciencia ficcion</button>
+        <button class="filter-button" data-genre="Terror">Terror</button>
+        <button class="filter-button" data-genre="Drama">Drama</button>
+        <button class="filter-button" data-genre="Comedia">Comedia</button>
+        <button class="filter-button" data-genre="Familia">Familia</button>
+      </div>
+    </section>
+
+    <section class="results-area" id="resultsArea" aria-live="polite"></section>
+
+    <section class="content-section" id="tendencias">
+      <div class="section-heading">
+        <h2>Tendencias</h2>
+        <span>Lo mas visto esta semana</span>
+      </div>
+      <div class="content-row" data-section="Tendencias"></div>
+    </section>
+
+    <section class="content-section" id="peliculas">
+      <div class="section-heading">
+        <h2>Peliculas populares</h2>
+        <span>Historias intensas para hoy</span>
+      </div>
+      <div class="content-row" data-section="Peliculas populares"></div>
+    </section>
+
+    <section class="content-section" id="series">
+      <div class="section-heading">
+        <h2>Series recomendadas</h2>
+        <span>Capitulos para seguir mirando</span>
+      </div>
+      <div class="content-row" data-section="Series recomendadas"></div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Estrenos</h2>
+        <span>Nuevas llegadas ficticias</span>
+      </div>
+      <div class="content-row" data-section="Estrenos"></div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Accion</h2>
+        <span>Velocidad, estrategia y peligro</span>
+      </div>
+      <div class="content-row" data-section="Accion"></div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Ciencia ficcion</h2>
+        <span>Futuros imposibles y tecnologia secreta</span>
+      </div>
+      <div class="content-row" data-section="Ciencia ficcion"></div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Terror</h2>
+        <span>Misterios para ver con la luz baja</span>
+      </div>
+      <div class="content-row" data-section="Terror"></div>
+    </section>
+
+    <section class="content-section">
+      <div class="section-heading">
+        <h2>Familia</h2>
+        <span>Aventuras para compartir</span>
+      </div>
+      <div class="content-row" data-section="Familia"></div>
+    </section>
+
+    <section class="content-section my-list-section" id="mi-lista">
+      <div class="section-heading">
+        <h2>Mi Lista</h2>
+        <span>Tus favoritos guardados</span>
+      </div>
+      <div class="content-row" id="myListRow"></div>
+      <p class="empty-list" id="emptyList">Aun no agregaste favoritos. Guarda tus peliculas y series para encontrarlas aqui.</p>
+    </section>
+  </main>
+
+  <div class="modal-overlay" id="detailsModal" aria-hidden="true">
+    <article class="details-modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="close-button" data-close-details aria-label="Cerrar detalles">×</button>
+      <div class="modal-art" id="modalArt"></div>
+      <div class="modal-copy">
+        <p class="eyebrow" id="modalType"></p>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div class="modal-meta" id="modalMeta"></div>
+        <div class="modal-actions">
+          <button class="primary-button" data-play-modal>Reproducir</button>
+          <button class="secondary-button" data-add-modal>Agregar a mi lista</button>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="modal-overlay player-overlay" id="playerModal" aria-hidden="true">
+    <section class="player-modal" role="dialog" aria-modal="true" aria-labelledby="playerTitle">
+      <div class="player-header">
+        <h2 id="playerTitle">Reproductor</h2>
+        <button class="close-button" data-close-player aria-label="Cerrar reproductor">×</button>
+      </div>
+      <div class="video-stage">
+        <div class="video-glow"></div>
+        <span class="play-symbol" id="playSymbol">▶</span>
+      </div>
+      <div class="player-controls">
+        <button class="primary-button player-toggle" id="playerToggle">Play</button>
+        <div class="progress-track" id="progressTrack" aria-label="Progreso de reproduccion">
+          <span class="progress-fill" id="progressFill"></span>
+        </div>
+        <span class="time-label" id="timeLabel">00:00 / 02:00</span>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
