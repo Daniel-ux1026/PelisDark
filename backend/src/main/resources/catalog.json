@@ -1,0 +1,233 @@
+[
+  {
+    "id": "dune2",
+    "title": "Dune: Parte dos",
+    "kind": "movie",
+    "year": 2024,
+    "genre": "Ciencia ficcion",
+    "description": "Paul se une a los fremen mientras debe elegir entre su amor y el destino de Arrakis.",
+    "poster": "https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg",
+    "backdrop": "https://hd-report.com/wp-content/uploads/2024/05/dune-part-2-Paul-Chani-desert-trailer-still-15-thumb-scaled.jpg",
+    "trailer": "Way9Dexny3w"
+  },
+  {
+    "id": "dune",
+    "title": "Dune",
+    "kind": "movie",
+    "year": 2021,
+    "genre": "Ciencia ficcion",
+    "description": "La familia Atreides llega a un planeta desertico donde se decide el equilibrio del imperio.",
+    "poster": "https://image.tmdb.org/t/p/w500/d5NXSklXo0qyIYkgV94XAgMIckC.jpg",
+    "backdrop": "",
+    "trailer": "n9xhJrPXop4"
+  },
+  {
+    "id": "soul",
+    "title": "Soul",
+    "kind": "movie",
+    "year": 2020,
+    "genre": "Animacion",
+    "description": "Un profesor de musica reconsidera lo que significa vivir cuando su gran oportunidad toma un giro inesperado.",
+    "poster": "https://image.tmdb.org/t/p/w500/hm58Jw4Lw8OIeECIq5qyPYhAeRJ.jpg",
+    "backdrop": "",
+    "trailer": "xOsLIiBStEs"
+  },
+  {
+    "id": "tenet",
+    "title": "Tenet",
+    "kind": "movie",
+    "year": 2020,
+    "genre": "Accion",
+    "description": "Un agente entra en una operacion donde el tiempo puede avanzar en dos direcciones.",
+    "poster": "https://image.tmdb.org/t/p/w500/k68nPLbIST6NP96JmTxmZijEvCA.jpg",
+    "backdrop": "",
+    "trailer": "LdOM0x0XDMo"
+  },
+  {
+    "id": "encanto",
+    "title": "Encanto",
+    "kind": "movie",
+    "year": 2021,
+    "genre": "Animacion",
+    "description": "Mirabel busca su lugar dentro de una familia colombiana cuyos miembros poseen dones extraordinarios.",
+    "poster": "https://image.tmdb.org/t/p/w500/4j0PNHkMr5ax3IA8tjtxcmPU3QT.jpg",
+    "backdrop": "",
+    "trailer": "CaimKeDcudo"
+  },
+  {
+    "id": "batman",
+    "title": "The Batman",
+    "kind": "movie",
+    "year": 2022,
+    "genre": "Suspenso",
+    "description": "Un joven Batman investiga una serie de crimenes que descubre la corrupcion de Gotham.",
+    "poster": "https://image.tmdb.org/t/p/w500/74xTEgt7R36Fpooo50r9T25onhq.jpg",
+    "backdrop": "",
+    "trailer": "mqqft2x_Aa4"
+  },
+  {
+    "id": "maverick",
+    "title": "Top Gun: Maverick",
+    "kind": "movie",
+    "year": 2022,
+    "genre": "Accion",
+    "description": "Maverick regresa para preparar a un grupo de pilotos para una mision de alto riesgo.",
+    "poster": "https://image.tmdb.org/t/p/w500/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+    "backdrop": "",
+    "trailer": "giXco2jaZ_4"
+  },
+  {
+    "id": "oppenheimer",
+    "title": "Oppenheimer",
+    "kind": "movie",
+    "year": 2023,
+    "genre": "Drama",
+    "description": "El fisico J. Robert Oppenheimer dirige un proyecto que cambia la historia y su propia vida.",
+    "poster": "https://image.tmdb.org/t/p/w500/ptpr0kGAckfQkJeJIt8st5dglvd.jpg",
+    "backdrop": "",
+    "trailer": "uYPbbksJxIg"
+  },
+  {
+    "id": "barbie",
+    "title": "Barbie",
+    "kind": "movie",
+    "year": 2023,
+    "genre": "Comedia",
+    "description": "Barbie abandona la perfeccion de su mundo y descubre las contradicciones de la vida real.",
+    "poster": "https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
+    "backdrop": "",
+    "trailer": "pBk4NYhWNMM"
+  },
+  {
+    "id": "spiderverse",
+    "title": "Spider-Man: A traves del Spider-Verso",
+    "kind": "movie",
+    "year": 2023,
+    "genre": "Animacion",
+    "description": "Miles Morales se reencuentra con Gwen y descubre una sociedad de heroes de otras dimensiones.",
+    "poster": "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+    "backdrop": "",
+    "trailer": "cqGjhVJWtEg"
+  },
+  {
+    "id": "insideout",
+    "title": "Intensamente 2",
+    "kind": "movie",
+    "year": 2024,
+    "genre": "Animacion",
+    "description": "La adolescencia de Riley trae nuevas emociones y transforma el trabajo de Alegria.",
+    "poster": "https://image.tmdb.org/t/p/w500/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+    "backdrop": "",
+    "trailer": "LEjhY15eCx0"
+  },
+  {
+    "id": "wildrobot",
+    "title": "Robot salvaje",
+    "kind": "movie",
+    "year": 2024,
+    "genre": "Animacion",
+    "description": "Una robot aprende a sobrevivir en una isla y a cuidar de un pequeno ganso.",
+    "poster": "https://image.tmdb.org/t/p/w500/wTnV3PCVW5O92JMrFvvrRcV39RU.jpg",
+    "backdrop": "",
+    "trailer": "67vbA5ZJdKQ"
+  },
+  {
+    "id": "queensgambit",
+    "title": "Gambito de dama",
+    "kind": "tv",
+    "year": 2020,
+    "genre": "Drama",
+    "description": "Una joven prodigio intenta alcanzar la cima del ajedrez mientras enfrenta sus conflictos personales.",
+    "poster": "https://static.tvmaze.com/uploads/images/original_untouched/510/1275203.jpg",
+    "backdrop": "",
+    "trailer": ""
+  },
+  {
+    "id": "squidgame",
+    "title": "El juego del calamar",
+    "kind": "tv",
+    "year": 2021,
+    "genre": "Suspenso",
+    "description": "Personas endeudadas aceptan participar en juegos infantiles con consecuencias mortales.",
+    "poster": "https://static.tvmaze.com/uploads/images/original_untouched/576/1440521.jpg",
+    "backdrop": "",
+    "trailer": ""
+  },
+  {
+    "id": "severance",
+    "title": "Severance",
+    "kind": "tv",
+    "year": 2022,
+    "genre": "Ciencia ficcion",
+    "description": "Los empleados de una empresa separan sus recuerdos laborales de su vida personal.",
+    "poster": "https://static.tvmaze.com/uploads/images/original_untouched/548/1371406.jpg",
+    "backdrop": "",
+    "trailer": ""
+  },
+  {
+    "id": "wednesday",
+    "title": "Merlina",
+    "kind": "tv",
+    "year": 2022,
+    "genre": "Fantasia",
+    "description": "Merlina Addams investiga un misterio mientras se adapta a una escuela poco convencional.",
+    "poster": "https://static.tvmaze.com/uploads/images/original_untouched/586/1466410.jpg",
+    "backdrop": "",
+    "trailer": ""
+  },
+  {
+    "id": "lastofus",
+    "title": "The Last of Us",
+    "kind": "tv",
+    "year": 2023,
+    "genre": "Drama",
+    "description": "Joel y Ellie cruzan un territorio devastado por una infeccion que transformo a la humanidad.",
+    "poster": "https://static.tvmaze.com/uploads/images/original_untouched/563/1409008.jpg",
+    "backdrop": "",
+    "trailer": ""
+  },
+  {
+    "id": "fallout",
+    "title": "Fallout",
+    "kind": "tv",
+    "year": 2024,
+    "genre": "Ciencia ficcion",
+    "description": "Una habitante de un refugio descubre un mundo exterior muy distinto de lo que le ensenaron.",
+    "poster": "https://static.tvmaze.com/uploads/images/original_untouched/599/1499142.jpg",
+    "backdrop": "",
+    "trailer": ""
+  },
+  {
+    "id": "shogun",
+    "title": "Shogun",
+    "kind": "tv",
+    "year": 2024,
+    "genre": "Drama",
+    "description": "Un navegante ingles queda involucrado en las luchas de poder del Japon del siglo XVII.",
+    "poster": "https://static.tvmaze.com/uploads/images/original_untouched/506/1265637.jpg",
+    "backdrop": "",
+    "trailer": ""
+  },
+  {
+    "id": "adolescence",
+    "title": "Adolescencia",
+    "kind": "tv",
+    "year": 2025,
+    "genre": "Drama",
+    "description": "Una acusacion de asesinato contra un adolescente sacude a su familia y a su comunidad.",
+    "poster": "https://static.tvmaze.com/uploads/images/original_untouched/558/1395109.jpg",
+    "backdrop": "",
+    "trailer": ""
+  },
+  {
+    "id": "hailmary",
+    "title": "Proyecto Fin del Mundo",
+    "kind": "movie",
+    "year": 2026,
+    "genre": "Ciencia ficcion",
+    "description": "Un profesor despierta en una nave lejos de la Tierra y reconstruye el proposito de una mision decisiva para la humanidad.",
+    "poster": "https://filmitena.com/img/Movie/Original/20137_Or_20260319224032.jpg",
+    "backdrop": "",
+    "trailer": "oA1aBu4ISxQ"
+  }
+]

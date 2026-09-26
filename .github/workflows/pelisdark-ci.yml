@@ -1,38 +1,65 @@
 name: PelisDark CI
-
 on:
   push:
-    branches:
-      - main
-      - master
+    branches: [main, master]
   pull_request:
   workflow_dispatch:
-
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   build-test-deploy:
-    name: Build, tests and simulated deploy
     runs-on: ubuntu-latest
-
+    timeout-minutes: 20
+    services:
+      mailpit:
+        image: axllent/mailpit:v1.31.2
+        ports: ["1025:1025", "8025:8025"]
     steps:
-      - name: Descargar repositorio
-        uses: actions/checkout@v7
-
-      - name: Preparar Node.js
-        uses: actions/setup-node@v7
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: "24"
-
-      - name: Compilacion de proyecto simple
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "21"
+          cache: maven
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: chatbot/requirements.txt
+      - name: Instalar dependencias React
+        run: npm ci --prefix frontend
+      - name: Instalar dependencias Python
+        run: python -m pip install -r chatbot/requirements.txt
+      - name: 1. Compilar React
         run: npm run build
-
-      - name: Ejecucion de pruebas automatizadas
+      - name: 1. Compilar Spring Boot
+        run: mvn -B -ntp -f backend/pom.xml package -DskipTests
+      - name: 2. Pruebas de React
         run: npm test
-
-      - name: Despliegue simulado
+      - name: 2. Pruebas de seguridad y persistencia (H2, no SQL Server)
+        run: mvn -B -ntp -f backend/pom.xml test
+      - name: 2. Pruebas de chatbot sin llamadas a OpenAI
+        run: python -m unittest discover -s chatbot
+      - name: 2. Auditoria de dependencias JavaScript
+        run: npm audit --prefix frontend --audit-level=moderate
+      - name: Preparar navegador
+        working-directory: frontend
+        run: npx playwright install --with-deps chromium
+      - name: 2. Pruebas de navegador y correo local
+        working-directory: frontend
+        run: npx playwright test
+      - name: 3. Despliegue simulado
         run: npm run deploy:simulate
-
-      - name: Publicar artefacto de staging
-        uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@v7
         with:
           name: pelisdark-staging
           path: staging
+          retention-days: 7

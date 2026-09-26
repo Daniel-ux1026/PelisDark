@@ -1,11 +1,16 @@
 {
   "name": "pelisdark",
-  "version": "1.0.0",
-  "description": "Plataforma ficticia de peliculas y series creada con HTML, CSS y JavaScript puro.",
+  "version": "2.0.0",
+  "description": "Catalogo de cine con React, Spring Boot, SQL Server y asistente OpenAI en Streamlit.",
   "private": true,
   "scripts": {
-    "build": "node scripts/build.js",
-    "test": "node tests/run-tests.js",
+    "dev": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "test": "npm --prefix frontend test",
+    "test:backend": "mvn -f backend/pom.xml test",
+    "test:e2e": "npm --prefix frontend run test:e2e",
+    "catalog:sync": "node scripts/sync-catalog.mjs",
+    "build:legacy": "node scripts/build.js",
     "deploy:simulate": "node scripts/simulate-deploy.js"
   },
   "author": "Daniel Olivos / DARNEXDAN",
